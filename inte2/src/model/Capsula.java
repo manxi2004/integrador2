@@ -1,49 +1,72 @@
 package model;
 
-public class Capsula {
-    private int id;
-    private String titulo;
-    private String contenido;
-    private boolean aprobada;
-    private boolean publicada;
+import java.util.Date;
 
-    public Capsula(int id, String titulo, String contenido) {
+public class Capsula {
+
+    private int id;
+    private String descripcion;
+    private String tipo;
+    private String nombreColaborador;
+    private String cargoColaborador;
+    private String aprendizaje;
+    private String hashtag;
+
+    public Capsula(int id, String descripcion, String tipo, String nombreColaborador, String cargoColaborador,
+            String aprendizaje, String hashtag) {
+
         this.id = id;
-        this.titulo = titulo;
-        this.contenido = contenido;
-        this.aprobada = false;
-        this.publicada = false;
+        this.descripcion = descripcion;
+        this.tipo = tipo;
+        this.nombreColaborador = nombreColaborador;
+        this.cargoColaborador = cargoColaborador;
+        this.aprendizaje = aprendizaje;
+        this.hashtag = hashtag;
+
     }
 
     public int getId() {
+
         return id;
+
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getDescripcion() {
+
+        return descripcion;
     }
 
-    public String getContenido() {
-        return contenido;
+    public String getTipo() {
+
+        return tipo;
+
     }
 
-    public boolean estaAprobada() {
-        return aprobada;
+    public String getNombreColaborador() {
+
+        return nombreColaborador;
+
     }
 
-    public boolean estaPublicada() {
-        return publicada;
+    public String getCargoColaborador() {
+
+        return cargoColaborador;
     }
 
-    public void aprobar() {
-        aprobada = true;
+    public void setAprobada(boolean b) {
     }
 
-    public void publicar() {
-        publicada = true;
+    public void setFechaAprobacion(Date date)
+
+    {
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getFechaAprobacion() {
+        return null;
     }
+
+    public String getHashtag() {
+        return hashtag;
+    }
+
 }
